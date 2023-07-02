@@ -1,0 +1,32 @@
+--Create a clothing store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
+INSERT INTO store VALUES (1, "T_shirts", 70, 1, 10.50);
+INSERT INTO store VALUES (2, "Jeans", 50, 2, 45);
+INSERT INTO store VALUES (3, "Leggings", 56, 3, 25);
+INSERT INTO store VALUES (4, "Cargos", 29, 4, 45);
+INSERT INTO store VALUES (5, "Jackets", 26, 5, 60.99);
+INSERT INTO store VALUES (6, "Socks", 34, 6, 15.49);
+INSERT INTO store VALUES (7, "Bras", 50, 6, 35.25);
+INSERT INTO store VALUES (8, "Shorts", 42, 7, 25.99);  
+INSERT INTO store VALUES (9, "Tank tops", 56, 1, 12.50); 
+INSERT INTO store VALUES (10, "Skirts", 70, 7, 25);
+INSERT INTO store VALUES (11, "Crop tops", 68, 1, 15);
+INSERT INTO store VALUES (12, "Pajama Set", 48, 3, 45);
+INSERT INTO store VALUES (13, "Sweaters", 37, 5, 52);
+INSERT INTO store VALUES (14, "Beanies", 23, 8, 15);
+INSERT INTO store VALUES (15, "Caps", 31, 8, 30.67);
+INSERT INTO store VALUES (16, "Belts", 43, 9, 15.99);
+INSERT INTO store VALUES (17, "Ties", 60, 9, 22.99);
+INSERT INTO store VALUES (18, "Underwears", 90, 6, 4.99); 
+INSERT INTO store VALUES (19, "Shoes", 60, 10, 60);
+INSERT INTO store VALUES (20, "Bathing suits", 57, 6, 25.99);
+INSERT INTO store VALUES (21, "Sweatpants", 50, 3, 45);
+INSERT INTO store VALUES (22, "Hoodies", 50, 5, 45);
+
+--display the database ordered by price. 
+SELECT * FROM store WHERE price ORDER BY price;
+
+--what is the total quantity of items in the  store? 
+SELECT SUM(quantity) FROM store;
